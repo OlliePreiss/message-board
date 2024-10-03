@@ -1,0 +1,15 @@
+<html>
+  <body>
+    <h3> <%= title %> </h3>
+    <% messages.map((message) => {  %>
+      <div>
+          <h3> <%= message.user %> </h3>
+          <p> <%= message.text %> </p>
+          <p> <%= message.added %> </p>
+        </div>
+      <% }) %>
+      <form method="GET" action="/new">
+        <button type="submit"> New </button>
+      </form>
+  </body>
+</html>
